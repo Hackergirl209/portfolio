@@ -1,0 +1,665 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+}
+body{
+    color: #ededed;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h3 span {
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    color: #0ef;
+}
+
+h3 span:hover {
+    transform: scale(1.2); /* Increase the size by 20% */
+    text-shadow: 0 0 40px #0ef;
+    color: #fff;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background:url(background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+img {
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+  
+  img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px #0ef;
+  }
+.home_content {
+    max-width: 600px;
+}  
+.home_content h3 {
+    font-size: 32px;
+    font-weight: 700;
+
+}
+.home_content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+.home_sic{
+    display: flex;
+    justify-content: space-around;
+}
+.home_sic a {
+    position: relative;
+    top: 5vh;
+    left: -5vw;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    transition: color 0.3s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.home_sic a:hover {
+    color: #0ef;
+    box-shadow: 0 0 27px #0ef;
+}
+
+.home_sic i {
+    font-size: 35px; /* Adjust the size as needed */
+    margin: 0px;  /* Adjust spacing between icons */
+}
+.resume {
+    position: relative;
+    top: 10vh;
+    width: 10vw;
+    height: 6vh;
+    font-size: 4vh;
+     /* Adjust the padding to make the button elongated */
+    border-radius: 25px; /* Adjust the border radius as needed */
+    background-color: #0ef;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.resume:hover {
+    box-shadow: 0 0 25px #0ef;
+}
+.header .logo {
+    position: relative;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+.header .navbar a {
+    position: relative;
+    animation: slideInFromTop 3s ease-out;
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Keyframes for sliding in from the top */
+@keyframes slideInFromTop {
+    from {
+        top: -100%;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.home .img {
+    position: relative;
+    animation: slideInFromRight 1s ease-out;
+}
+
+.home_content h3 {
+    position: relative;
+    animation: slideInFromTop 1s ease-out 1s; /* Delay of 1 second */
+}
+
+.home_content h1 {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out 2s; /* Delay of 2 seconds */
+}
+
+.home_content p {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out 2s; /* Delay of 3 seconds */
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slideInFromRight {
+    from {
+        right: -100%;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+/* Keyframes for sliding in from the top */
+@keyframes slideInFromTop {
+    from {
+        top: -100%;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+/* Initial styles for the span */
+h3 span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: changeText 1s steps(3, end) infinite;
+}
+
+/* Keyframes for changing text */
+@keyframes changeText {
+    0%, 33.33% {
+        content: "Web developer";
+    }
+    33.33%, 66.66% {
+        content: "Social media marketer";
+    }
+    66.66%, 100% {
+        content: "Frontend developer";
+    }
+}
+
+.home_sic a, .resume {
+    position: relative;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Keyframes for sliding in from the bottom */
+@keyframes slideInFromBottom {
+    from {
+        bottom: -100%;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: .5;
+    }
+}
+.about {
+    background-color: #041f4a; /* Dark royal blue background */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Justify content horizontally */
+}
+
+.about_content {
+    max-width: 800px; /* Max width for content */
+    padding: 50px; /* Padding around content */
+}
+
+.about h1 {
+    font-size: 45px;
+    color: rgb(227, 234, 235); /* Text color for span */
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
+}
+.about h1 span{
+    color: #0ef;
+}
+
+.about p {
+    font-size: 25px;
+    position: relative;
+    animation: slideInFromRight 1s ease-out;
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInFromLeft {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Keyframes for sliding in from the right */
+@keyframes slideInFromRight {
+    from {
+        right: -100%;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
+.read{
+    position: relative;
+    top: 5vh;
+    width: 10vw;
+    height: 6vh;
+    font-size: 4vh;
+     /* Adjust the padding to make the button elongated */
+    border-radius: 25px; /* Adjust the border radius as needed */
+    background-color: #0ef;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.read:hover {
+    box-shadow: 0 0 25px #0ef;
+}
+.skill_heading {
+    text-align: center;
+    color: #0ef; /* Text color #0ef */
+    margin-bottom: 30px; /* Adjust margin as needed */
+    position: relative;
+    animation: slideInFromTop 1s ease-out; /* Animation for sliding in from the top */
+}
+
+/* Keyframes for sliding in from the top */
+@keyframes slideInFromTop {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.skill {
+    background-color: #041f4a; /* Dark royal blue background */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+    justify-content: center;
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+.skill_item {
+    text-align: center;
+    padding: 20px;
+    margin: 10px; /* Adjust margin between items */
+    border-radius: 10px; /* Adjust border radius as needed */
+    transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.skill_item:hover {
+    box-shadow: 0 0 10px #0ef; /* Shadow color #0ef on hover */
+    border: 2px solid #0ef; /* Solid border color #0ef on hover */
+}
+
+.skill_icon img {
+    width: 150px; /* Adjust width as needed */
+    height: auto;
+}
+
+.skill_item:hover h2 {
+    animation: easeOut 0.5s ease-out; /* Animation on hover */
+}
+
+/* Keyframes for easing out animation */
+@keyframes easeOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+.heading {
+    position: relative;
+    left: 25vw;
+    font-size: 55px;
+    text-align: center;
+    color: #0ef; /* Text color #0ef */
+    margin-bottom: 30px; /* Adjust margin as needed */
+    position: relative;
+    animation: slideInFromTop 1s ease-out; /* Animation for sliding in from the top */
+}
+
+/* Keyframes for sliding in from the top */
+@keyframes slideInFromTop {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.skill {
+    background-color: #041f4a; /* Dark royal blue background */
+    display: flex;
+    /* Allow items to wrap into multiple rows */
+    justify-content: center;
+    
+    padding: 50px 0; /* Adjust padding as needed */
+}
+.skill_masla{
+    position: relative;
+    left: -5vw;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+    justify-content: center;
+    width: 50vw;
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+.skill_item {
+    text-align: center;
+    padding: 20px;
+    margin: 10px; /* Adjust margin between items */
+    border-radius: 10px; /* Adjust border radius as needed */
+    transition: box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+    animation: slideInFromDifferentSide 1s ease-out; /* Animation for sliding in from different sides */
+}
+
+.skill_item:nth-child(even) {
+    animation-delay: 0.5s; /* Delay for even-indexed items */
+}
+
+.skill_item:nth-child(odd) {
+    animation-delay: 1s; /* Delay for odd-indexed items */
+}
+
+.skill_item:hover {
+    box-shadow: 0 0 10px #0ef; /* Shadow color #0ef on hover */
+    border: 2px solid #0ef; /* Solid border color #0ef on hover */
+}
+
+.skill_icon img {
+    width: 300px; /* Adjust width as needed */
+    height: auto;
+}
+
+.skill_item:hover h2 {
+    animation: easeOut 0.5s ease-out; /* Animation on hover */
+}
+
+/* Keyframes for easing out animation */
+@keyframes easeOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Keyframes for sliding in from different sides */
+@keyframes slideInFromDifferentSide {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* General styling for the service section */
+.service {
+    background-color: darkroyalblue; /* Applying dark royal blue background color */
+    color: black;
+    padding: 50px 0;
+    text-align: center; /* Center aligning the text */
+}
+
+.service .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service h1 {
+    color: #0ef; /* Setting the color of h1 */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    top: -20px;
+    opacity: 0;
+    transition: all 0.5s ease-out; /* Adding ease-out transition */
+}
+
+.service .services-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add spacing between service items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.service .service-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease-out; /* Adding ease-out transition */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Initial box-shadow */
+    position: relative;
+    overflow: hidden;
+    width: 300px; /* Set a fixed width for the service box */
+    text-align: left; /* Align text to the left inside the service box */
+}
+
+.service .service-item:hover {
+    box-shadow: 0 0 20px #0ef; /* Box-shadow on hover */
+}
+
+.service .service-item i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #00eeff;
+}
+
+.service .service-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service .service-item p {
+    margin-bottom: 20px;
+    position: relative;
+    right: -20px;
+    opacity: 0;
+    transition: all 0.5s ease-out; /* Adding ease-out transition */
+}
+
+.service .service-item:hover h1 {
+    top: 0;
+    opacity: 1;
+}
+
+.service .service-item:hover p {
+    right: 0;
+    opacity: 1;
+}
+
+.service .read {
+    position: relative;
+    top: -20px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    border: 2px solid #0ef;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.service .read:hover {
+    background-color: #0ef;
+    color: black;
+}
+.footer {
+    background-color: #0a043c; /* Dark royal blue */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Align items in center */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+}
+
+.contact_details {
+    text-align: left; /* Align contact details to the right */
+    flex-grow: 1; /* Allow contact details to expand */
+}
+
+.contact_details p {
+    margin: 5px 0;
+    font-size: 18px; /* Increase font size of contact details */
+}
+
+.footer_copyright {
+    color: #fff;
+    width: 100%; /* Occupy full width */
+    text-align: center; /* Center align copyright text */
+    margin-top: 10px; /* Add some space from above */
+}
+/*Next Section For responsiveness*/
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .header {
+        padding: 2vh 2%;
+    }
+
+    .logo,
+    .navbar a {
+        font-size: 4vw;
+        margin-left: 2vw;
+    }
+
+    .home {
+        padding: 5vh 2% 0;
+    }
+
+    img {
+        border-radius: 25%;
+    }
+
+    .resume {
+        width: 20vw;
+        height: 8vh;
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about h1 {
+        font-size: 8vw;
+    }
+
+    .about p {
+        font-size: 4vw;
+    }
+
+    .read {
+        width: 30vw;
+        height: 10vh;
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+
+    .skill_heading {
+        font-size: 5vw;
+        margin-bottom: 3vh;
+    }
+
+    .skill_item {
+        padding: 5vw;
+        margin: 5vw;
+        border-radius: 3vw;
+    }
+}
